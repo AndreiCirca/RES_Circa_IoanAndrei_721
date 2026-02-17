@@ -39,4 +39,12 @@ public class SpaceMissionService {
         return missionEventRepository.getAllMissionEvents();
     }
 
+    //2
+    public List<Astronaut> filterBySpacecraft(String spacecraft) {
+        return astronautRepository.getAllAstronauts().stream()
+                .filter(a -> a.getSpacecraft().equalsIgnoreCase(spacecraft))
+                .filter(a -> a.getStatus() == AstronautStatus.ACTIVE)
+                .toList();
+    }
+
 }

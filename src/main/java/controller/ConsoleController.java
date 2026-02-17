@@ -22,6 +22,7 @@ public class ConsoleController {
 
     public void run() {
         subpunct1();
+        subpunct2();
 
     }
 
@@ -38,4 +39,14 @@ public class ConsoleController {
         astronauts.forEach(System.out::println);
         System.out.println("\n");
     }
+
+    // 2)
+    private void subpunct2() {
+        System.out.print("Input Spacecraft: ");
+        String spacecraft = scanner.nextLine();
+
+        service.filterBySpacecraft(spacecraft).forEach(System.out::println);
+        System.out.println("\n");
+    }
+
 }
