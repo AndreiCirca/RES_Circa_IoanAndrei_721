@@ -47,4 +47,12 @@ public class SpaceMissionService {
                 .toList();
     }
 
+    // 3)
+    public List<Astronaut> getSortedAstronauts() {
+        return astronautRepository.getAllAstronauts().stream()
+                .sorted(Comparator
+                        .comparing(Astronaut::getExperienceLevel).reversed()
+                        .thenComparing(Astronaut::getName))
+                .toList();
+    }
 }

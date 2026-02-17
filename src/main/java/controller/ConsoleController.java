@@ -23,6 +23,7 @@ public class ConsoleController {
     public void run() {
         subpunct1();
         subpunct2();
+        subpunct3();
 
     }
 
@@ -49,4 +50,9 @@ public class ConsoleController {
         System.out.println("\n");
     }
 
+    // 3)
+    private void subpunct3() {
+        service.getSortedAstronauts().forEach(System.out::println);
+        System.out.println("\n");
+    }
 }
