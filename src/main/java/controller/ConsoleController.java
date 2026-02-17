@@ -42,7 +42,7 @@ public class ConsoleController {
         System.out.println("\n");
     }
 
-    // 2)
+
     private void subpunct2() {
         System.out.print("Input Spacecraft: ");
         String spacecraft = scanner.nextLine();
@@ -51,15 +51,14 @@ public class ConsoleController {
         System.out.println("\n");
     }
 
-    // 3)
+
     private void subpunct3() {
         service.getSortedAstronauts().forEach(System.out::println);
         System.out.println("\n");
     }
 
-    // 4)
+
     private void subpunct4() {
         service.writeReversed();
     }
-
 }
