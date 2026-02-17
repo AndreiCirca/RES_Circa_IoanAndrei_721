@@ -33,6 +33,16 @@ public class AstronautRepository {
             return new ArrayList<>();
         }
     }
+    // 4)
+    public void saveAstronauts(List<Astronaut> astronauts) {
+        try (FileWriter writer = new FileWriter("src/data/astronauts_sorted.txt")) {
+            for (Astronaut astronaut : astronauts) {
+                writer.write(astronaut.toString() + "\n");
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
 }

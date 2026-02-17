@@ -24,6 +24,7 @@ public class ConsoleController {
         subpunct1();
         subpunct2();
         subpunct3();
+        subpunct4();
 
     }
 
@@ -55,4 +56,10 @@ public class ConsoleController {
         service.getSortedAstronauts().forEach(System.out::println);
         System.out.println("\n");
     }
+
+    // 4)
+    private void subpunct4() {
+        service.writeReversed();
+    }
+
 }

@@ -55,4 +55,10 @@ public class SpaceMissionService {
                         .thenComparing(Astronaut::getName))
                 .toList();
     }
+
+    // 4)
+    public void writeReversed() {
+        List<Astronaut> sorted = getSortedAstronauts();
+        astronautRepository.saveAstronauts(sorted.reversed());
+    }
 }
